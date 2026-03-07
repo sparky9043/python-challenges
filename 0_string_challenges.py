@@ -4,7 +4,8 @@
 # Hints are at the bottom of the file.
 # ============================================================
 def divider(ex_number):
-    print("\n",f"Challenge {ex_number}".center(26,"*"), "\n")
+    # print("\n",f"Challenge {ex_number}".center(26,"*"), "\n")
+    pass
 
 # --------------------------------------------------------------
 # Challenge 1 — Clean the Input
@@ -17,14 +18,13 @@ def divider(ex_number):
 # --------------------------------------------------------------
 divider(1)
 
-raw_input = "   alice   johnson  "
+raw_input = "   alice  johnson  "
 raw_input = raw_input.strip()
 print(raw_input)
 raw_input = raw_input.title()
 print(raw_input)
 output = raw_input.replace("  ", " ")
 print(output)
-
 
 # --------------------------------------------------------------
 # Challenge 2 — Username Validator
@@ -40,12 +40,8 @@ print(output)
 divider(2)
 
 def is_valid_username(username):
-    if 4 <= len(username) <= 16:
-        if username.isalnum():
-            if username[0].isalpha():
-                if username.islower():
-                    return True
-    return False
+    return (4 <= len(username) <= 16 and username.isalnum() and
+            username[0].isalpha() and username.islower())
 
 print(is_valid_username("alice"))       # True
 print(is_valid_username("Alice"))       # False — uppercase
@@ -64,13 +60,13 @@ divider(3)
 
 sentence = "the cat sat on the mat and the cat sat again"
 
-word_freq = {}
+word_count = {}
 for word in sentence.split():
-    word_freq[word] = word_freq.get(word, 0) + 1
-
-print(word_freq)
-sorted_words = sorted(list(word_freq))
-print(sorted_words)
+    word_count[word] = word_count.get(word, 0) + 1
+    
+sorted_word_count = { key: value for key, value in sorted(word_count.items())}
+# ALTERNATE: dict(sorted(word_count.items()))
+print(sorted_word_count)
 
 # --------------------------------------------------------------
 # Challenge 4 — CSV Row Parser
@@ -86,7 +82,7 @@ divider(4)
 
 csv_row = "Alice , 30 , Toronto ,  developer , 95000"
 row_list =  [v.strip() for v in csv_row.split(",")]
-print(row_list)
+# print(row_list)
 final_row_list = []
 
 for element in row_list:
@@ -96,7 +92,7 @@ for element in row_list:
     else:
         final_row_list.append(column)    
 
-print(final_row_list)
+# print(final_row_list)
 
 # --------------------------------------------------------------
 # Challenge 5 — Title Slug Generator
@@ -119,9 +115,9 @@ def slugify(title: str):
     
     return slug
 
-print(slugify("  Hello, World!  "))         # "hello-world"
-print(slugify("Python 3.12 -- What's New")) # "python-312--whats-new"
-print(slugify("  Top 10 Tips & Tricks  "))  # "top-10-tips--tricks"
+# print(slugify("  Hello, World!  "))         # "hello-world"
+# print(slugify("Python 3.12 -- What's New")) # "python-312--whats-new"
+# print(slugify("  Top 10 Tips & Tricks  "))  # "top-10-tips--tricks"
 
 
 # --------------------------------------------------------------
@@ -141,10 +137,10 @@ results = [
     ("Diana",   78),
 ]
 
-print(f"{"Name".ljust(12)}{"Score".rjust(6)}")
-print("-" * 18)
-for score in results:
-    print(f"{score[0].ljust(12)}{str(score[1]).rjust(6)}")
+# print(f"{"Name".ljust(12)}{"Score".rjust(6)}")
+# print("-" * 18)
+# for score in results:
+#     print(f"{score[0].ljust(12)}{str(score[1]).rjust(6)}")
 
 
 
@@ -158,8 +154,8 @@ for score in results:
 # --------------------------------------------------------------
 # Challenge 7:  Find the "@" with find(); then slice left with rfind(" ") and right with find(" ", idx).
 divider(7)
-text = "Please contact support at help.desk@example.com for assistance."
-index_at = text.find("@")
+# text = "Please contact support at help.desk@example.com for assistance."
+# index_at = text.find("@")
 
 
 # --------------------------------------------------------------
@@ -175,10 +171,10 @@ def is_palindrome(text):
     pal_str = text.lower().replace(" ", "")
     return pal_str == pal_str[::-1]
 
-print(is_palindrome("racecar"))                   # True
-print(is_palindrome("A man a plan a canal Panama")) # True
-print(is_palindrome("hello"))                     # False
-print(is_palindrome("Was it a car or a cat I saw")) # True
+# print(is_palindrome("racecar"))                   # True
+# print(is_palindrome("A man a plan a canal Panama")) # True
+# print(is_palindrome("hello"))                     # False
+# print(is_palindrome("Was it a car or a cat I saw")) # True
 
 
 # --------------------------------------------------------------
@@ -194,10 +190,10 @@ print(is_palindrome("Was it a car or a cat I saw")) # True
 # --------------------------------------------------------------
 divider(9)
 
-student   = "Charlie"
-score     = 432.7
-max_score = 500
-total_students = 1_284
+# student   = "Charlie"
+# score     = 432.7
+# max_score = 500
+# total_students = 1_284
 # your code here
 
 
@@ -217,9 +213,9 @@ divider(10)
 def compress(s):
     pass  # your code here
 
-print(compress("aabbccddaa"))    # "a2b2c2d2a2"
-print(compress("aaabba"))        # "a3b2a1"
-print(compress("abcd"))          # "abcd" — compressed is not shorter
+# print(compress("aabbccddaa"))    # "a2b2c2d2a2"
+# print(compress("aaabba"))        # "a3b2a1"
+# print(compress("abcd"))          # "abcd" — compressed is not shorter
 
 
 # ============================================================
