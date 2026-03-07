@@ -141,7 +141,8 @@ results = [
     ("Diana",   78),
 ]
 
-column_1_space = column_2_space = 10
+column_1_space = 12
+column_2_space = 6
 top_row = f'{"name".ljust(column_1_space)}{"score".rjust(column_2_space)}'
 print(top_row)
 
