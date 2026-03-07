@@ -83,16 +83,15 @@ divider(4)
 csv_row = "Alice , 30 , Toronto ,  developer , 95000"
 row_list =  [v.strip() for v in csv_row.split(",")]
 # print(row_list)
+stripped_list = [item.strip() for item in row_list]
 final_row_list = []
-
-for element in row_list:
-    column = element.strip()
-    if column.isdigit():
-        final_row_list.append(int(column))
+for item in stripped_list:
+    if item.isdigit():
+        final_row_list.append(int(item))
     else:
-        final_row_list.append(column)    
+        final_row_list.append(item)
 
-# print(final_row_list)
+print(final_row_list)
 
 # --------------------------------------------------------------
 # Challenge 5 — Title Slug Generator
