@@ -141,11 +141,13 @@ results = [
     ("Diana",   78),
 ]
 
-# print(f"{"Name".ljust(12)}{"Score".rjust(6)}")
-# print("-" * 18)
-# for score in results:
-#     print(f"{score[0].ljust(12)}{str(score[1]).rjust(6)}")
+column_1_space = column_2_space = 10
+top_row = f'{"name".ljust(column_1_space)}{"score".rjust(column_2_space)}'
+print(top_row)
 
+for data in results:
+    row = f'{data[0].ljust(column_1_space)}{str(data[1]).rjust(column_2_space)}'
+    print(row)
 
 
 # --------------------------------------------------------------
