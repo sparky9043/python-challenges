@@ -216,12 +216,12 @@ print(is_palindrome("Was it a car or a cat I saw")) # True
 # --------------------------------------------------------------
 divider(9)
 
-# student   = "Charlie"
-# score     = 432.7
-# max_score = 500
-# total_students = 1_284
+student   = "Charlie"
+score     = 432.7
+max_score = 500
+total_students = 1_284
 # your code here
-
+print(f'{student:<15} {score:>6.1f} {(score / max_score):.1%} {total_students:,}')
 
 # --------------------------------------------------------------
 # Challenge 10 — String Compressor
