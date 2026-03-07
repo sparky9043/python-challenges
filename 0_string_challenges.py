@@ -173,7 +173,13 @@ space_before_email = text.rfind(" ", 0, index_of_at)
 
 email = text[space_before_email + 1: space_after_email]
 
-print(email)
+email_split = email.partition("@")
+
+email_username = email_split[0]
+email_domain = email_split[-1]
+
+print(f"Username: {email_username}")
+print(f"Domain: {email_domain}")
 
 
 # --------------------------------------------------------------
