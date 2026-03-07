@@ -236,12 +236,31 @@ divider(9)
 # --------------------------------------------------------------
 divider(10)
 
-def compress(s):
-    pass  # your code here
+def compress(data):
+    result = []
+    length = len(data)
 
-# print(compress("aabbccddaa"))    # "a2b2c2d2a2"
-# print(compress("aaabba"))        # "a3b2a1"
-# print(compress("abcd"))          # "abcd" — compressed is not shorter
+    count = 0
+    for pos in range(length):
+        count += 1
+        if pos == length - 1 or data[pos] != data[pos + 1]:
+            result.append((data[pos], count))
+            count = 0
+            
+    compression = []
+    for item in result:
+        compression.append(item[0])
+        compression.append(str(item[1]))
+    compression = ''.join(compression)
+    
+    if len(compression) > len(data):
+        return data
+    else:
+        return compression
+
+print(compress("aabbccddaa"))    # "a2b2c2d2a2"
+print(compress("aaabba"))        # "a3b2a1"
+print(compress("abcd"))          # "abcd" — compressed is not shorter
 
 
 # ============================================================
