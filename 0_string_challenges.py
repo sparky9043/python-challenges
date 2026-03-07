@@ -184,14 +184,22 @@ print(email)
 # --------------------------------------------------------------
 divider(8)
 
+# def is_palindrome(text):
+#     reversed_str = text.lower().replace(" ", "")
+#     reversed_str = reversed_str[::-1]
+#     return reversed_str == text
+    
 def is_palindrome(text):
-    pal_str = text.lower().replace(" ", "")
-    return pal_str == pal_str[::-1]
+    reverse_str = text.lower().replace(" ", "")
+    reverse_str = [char for char in reverse_str]
+    reverse_str.reverse()
+    reverse_str = ''.join(reverse_str)
+    return reverse_str == text
 
-# print(is_palindrome("racecar"))                   # True
-# print(is_palindrome("A man a plan a canal Panama")) # True
-# print(is_palindrome("hello"))                     # False
-# print(is_palindrome("Was it a car or a cat I saw")) # True
+print(is_palindrome("racecar"))                   # True
+print(is_palindrome("A man a plan a canal Panama")) # True
+print(is_palindrome("hello"))                     # False
+print(is_palindrome("Was it a car or a cat I saw")) # True
 
 
 # --------------------------------------------------------------
