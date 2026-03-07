@@ -4,8 +4,7 @@
 # Hints are at the bottom of the file.
 # ============================================================
 def divider(ex_number):
-    # print("\n",f"Challenge {ex_number}".center(26,"*"), "\n")
-    pass
+    print("\n",f"Challenge {ex_number}".center(26,"*"), "\n")
 
 # --------------------------------------------------------------
 # Challenge 1 — Clean the Input
