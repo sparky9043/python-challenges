@@ -107,16 +107,21 @@ print(final_row_list)
 divider(5)
 
 def slugify(title: str):
-    slug = title.lower()
-    slug = slug.strip()
-    slug = slug.replace(" ", "-")
-    slug = "".join(char for char in slug if char.isalnum() or char == "-")
+    # strip function and lower
+    slug = title.strip().lower()
     
+    # remove non-alphanumeric characters but not space char
+    char_removed = []
+    for char in slug.strip(""):
+        if char.isalnum() or char == " ":
+            char_removed.append(char)
+    slug = "".join(char_removed)
+    slug = slug.replace(" ", "-")
     return slug
 
-# print(slugify("  Hello, World!  "))         # "hello-world"
-# print(slugify("Python 3.12 -- What's New")) # "python-312--whats-new"
-# print(slugify("  Top 10 Tips & Tricks  "))  # "top-10-tips--tricks"
+print(slugify("  Hello, World!  "))         # "hello-world"
+print(slugify("Python 3.12 -- What's New")) # "python-312--whats-new"
+print(slugify("  Top 10 Tips & Tricks  "))  # "top-10-tips--tricks"
 
 
 # --------------------------------------------------------------
