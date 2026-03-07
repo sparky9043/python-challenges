@@ -160,8 +160,19 @@ for data in results:
 # --------------------------------------------------------------
 # Challenge 7:  Find the "@" with find(); then slice left with rfind(" ") and right with find(" ", idx).
 divider(7)
-# text = "Please contact support at help.desk@example.com for assistance."
-# index_at = text.find("@")
+text = "Please contact support at help.desk@example.com for assistance."
+
+index_of_at = text.find("@")
+
+# Find the first empty space between @ and find first occurrence
+space_after_email = text.find(" ", index_of_at)
+
+# Find the last empty space between index 0 and index of @
+space_before_email = text.rfind(" ", 0, index_of_at)
+
+email = text[space_before_email + 1: space_after_email]
+
+print(email)
 
 
 # --------------------------------------------------------------
