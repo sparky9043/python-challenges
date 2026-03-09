@@ -80,6 +80,8 @@ print(stack.pop())
 
 scores = [88, 45, 92, 67, 73]
 # your code here
+scores.sort(reverse=True)
+print(scores)
 
 
 # --------------------------------------------------------------
@@ -90,7 +92,8 @@ scores = [88, 45, 92, 67, 73]
 
 words = ["banana", "Apple", "cherry", "Mango"]
 # your code here
-
+words.sort(key=str.lower)
+print(words)
 
 # --------------------------------------------------------------
 # Challenge 8 — Find & Count
