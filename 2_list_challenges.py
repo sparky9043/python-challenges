@@ -29,6 +29,8 @@ print(grocery)
 shelf_a = ["pasta", "rice"]
 shelf_b = ["beans", "lentils", "oats"]
 # your code here
+shelf_a.extend(shelf_b)
+print(shelf_a)
 
 
 # --------------------------------------------------------------
