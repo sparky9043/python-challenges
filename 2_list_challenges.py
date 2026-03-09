@@ -104,6 +104,8 @@ print(words)
 
 votes = ["yes", "no", "yes", "yes", "no", "yes"]
 # your code here
+print(votes.count("yes"))
+print(votes.index("no"))
 
 
 # --------------------------------------------------------------
@@ -114,7 +116,8 @@ votes = ["yes", "no", "yes", "yes", "no", "yes"]
 
 letters = ["a", "b", "c", "d", "e"]
 # your code here
-
+letters.reverse()
+print(letters)
 
 # --------------------------------------------------------------
 # Challenge 10 — Sort Without Touching the Original
@@ -125,7 +128,7 @@ letters = ["a", "b", "c", "d", "e"]
 
 temps = [36.6, 37.2, 35.9, 38.1, 36.0]
 # your code here
-
+print(sorted(temps))
 
 # ============================================================
 # BONUS TIPS
