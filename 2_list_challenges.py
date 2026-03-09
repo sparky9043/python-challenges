@@ -41,7 +41,8 @@ print(shelf_a)
 
 guests = ["Alice", "Bob", "Charlie"]
 # your code here
-
+guests.insert(1, "Diana")
+print(guests)
 
 # --------------------------------------------------------------
 # Challenge 4 — Remove the Duplicate
