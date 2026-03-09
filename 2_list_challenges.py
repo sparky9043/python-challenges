@@ -52,6 +52,8 @@ print(guests)
 
 numbers = [4, 7, 2, 7, 9]
 # your code here
+numbers.remove(7)
+print(numbers)
 
 
 # --------------------------------------------------------------
