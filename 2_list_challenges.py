@@ -14,7 +14,10 @@
 
 grocery = []
 # your code here
-
+grocery.append("eggs")
+grocery.append("milk")
+grocery.append("bread")
+print(grocery)
 
 # --------------------------------------------------------------
 # Challenge 2 — Merge the Shelves
