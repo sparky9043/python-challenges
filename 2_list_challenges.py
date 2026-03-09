@@ -65,7 +65,12 @@ print(numbers)
 
 stack = []
 # your code here
+stack.append(10)
+stack.append(20)
+stack.append(30)
 
+print(stack.pop())
+print(stack.pop())
 
 # --------------------------------------------------------------
 # Challenge 6 — Sort the Scores
