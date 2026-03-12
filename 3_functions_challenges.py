@@ -16,7 +16,18 @@
 # --------------------------------------------------------------
 
 # your code here
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9 / 5) + 32
 
+def fahrenheit_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * (5 / 9)
+
+# print(celsius_to_fahrenheit(0))
+# print(celsius_to_fahrenheit(100))
+# print(celsius_to_fahrenheit(50))
+# print(fahrenheit_to_celsius(32))
+# print(fahrenheit_to_celsius(212))
+# print(fahrenheit_to_celsius(122))
 
 # --------------------------------------------------------------
 # Challenge 2 — Greeting with Default
