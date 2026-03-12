@@ -103,7 +103,16 @@ def tag(name, content, **attrs):
 
 data = [12, 45, 7, 23, 56, 3, 89, 34]
 # your code here
+def analyze(numbers):
+    count = len(numbers)
+    average = sum(numbers) / count
+    return (min(numbers), max(numbers), average, count)
 
+(min, max, average, count) = analyze(data)
+# print(min)
+# print(max)
+# print(average)
+# print(count)
 
 # --------------------------------------------------------------
 # Challenge 6 — Type-Hinted Calculator
