@@ -86,7 +86,10 @@ def tag(name, content, **attrs):
 
 # def tag(name, content, **attrs):
     # print(name, content, attrs)
-print(tag('a','Python', href="https://python.org", target="_blank"))
+# print(tag('a','Python', href="https://python.org", target="_blank"))
+
+# Note that *kwargs is used to receive dictionary arguments
+# Which can be iterated using for key, value in kwargs.items()
 
 
 # --------------------------------------------------------------
