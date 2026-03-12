@@ -16,7 +16,18 @@
 # --------------------------------------------------------------
 
 # your code here
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9 / 5) + 32
 
+def fahrenheit_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * (5 / 9)
+
+# print(celsius_to_fahrenheit(0))
+# print(celsius_to_fahrenheit(100))
+# print(celsius_to_fahrenheit(50))
+# print(fahrenheit_to_celsius(32))
+# print(fahrenheit_to_celsius(212))
+# print(fahrenheit_to_celsius(122))
 
 # --------------------------------------------------------------
 # Challenge 2 — Greeting with Default
@@ -30,6 +41,12 @@
 # --------------------------------------------------------------
 
 # your code here
+def greet(name, greeting="Hello"):
+    print(f"{name}, {greeting}!")
+    
+# greet('Jay')
+# greet('John', 'good morning')
+# greet(greeting='greetings', name='Tory')
 
 
 # --------------------------------------------------------------
@@ -43,7 +60,15 @@
 # --------------------------------------------------------------
 
 # your code here
+def total(*numbers):
+    sum = 0
+    accumulator = []
+    for number in numbers:
+        sum += number
+        accumulator.append(sum)
+    return accumulator
 
+# print(total(1, 2, 3, 4))
 
 # --------------------------------------------------------------
 # Challenge 4 — HTML Tag Builder
@@ -56,6 +81,15 @@
 # --------------------------------------------------------------
 
 # your code here
+def tag(name, content, **attrs):
+    return f"<{name} href=\"{attrs["href"]}\" target=\"{attrs["target"]}\">{content}</{name}>"
+
+# def tag(name, content, **attrs):
+    # print(name, content, attrs)
+# print(tag('a','Python', href="https://python.org", target="_blank"))
+
+# Note that *kwargs is used to receive dictionary arguments
+# Which can be iterated using for key, value in kwargs.items()
 
 
 # --------------------------------------------------------------
@@ -69,7 +103,16 @@
 
 data = [12, 45, 7, 23, 56, 3, 89, 34]
 # your code here
+def analyze(numbers):
+    count = len(numbers)
+    average = sum(numbers) / count
+    return (min(numbers), max(numbers), average, count)
 
+(min, max, average, count) = analyze(data)
+# print(min)
+# print(max)
+# print(average)
+# print(count)
 
 # --------------------------------------------------------------
 # Challenge 6 — Type-Hinted Calculator
@@ -81,7 +124,30 @@ data = [12, 45, 7, 23, 56, 3, 89, 34]
 # --------------------------------------------------------------
 
 # your code here
+def add(a: float, b: float) -> float:
+    """Function takes two floats and returns their sum as floats"""
+    return float(a + b)
 
+def subtract(a: float, b: float) -> float:
+    """Function takes two floats and returns their difference as floats"""
+    return float(a - b)
+
+def multiply(a: float, b: float) -> float:
+    """Function takes two floats and returns their product as floats"""
+    return float(a * b)
+
+def divide(a: float, b: float) -> float:
+    """Function takes two floats and returns their quotient as floats"""
+    try:
+        return a / b
+    except ZeroDivisionError as e:
+        print("Error:", e)
+        return None
+
+print(add(3, 4))
+print(subtract(3, 4))
+print(multiply(3, 4))
+print(divide(3, 0))
 
 # --------------------------------------------------------------
 # Challenge 7 — Decorator: Logger
