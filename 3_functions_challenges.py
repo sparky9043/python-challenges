@@ -60,7 +60,15 @@ def greet(name, greeting="Hello"):
 # --------------------------------------------------------------
 
 # your code here
+def total(*numbers):
+    sum = 0
+    accumulator = []
+    for number in numbers:
+        sum += number
+        accumulator.append(sum)
+    return accumulator
 
+print(total(1, 2, 3, 4))
 
 # --------------------------------------------------------------
 # Challenge 4 — HTML Tag Builder
