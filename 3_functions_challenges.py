@@ -68,7 +68,7 @@ def total(*numbers):
         accumulator.append(sum)
     return accumulator
 
-print(total(1, 2, 3, 4))
+# print(total(1, 2, 3, 4))
 
 # --------------------------------------------------------------
 # Challenge 4 — HTML Tag Builder
@@ -81,6 +81,12 @@ print(total(1, 2, 3, 4))
 # --------------------------------------------------------------
 
 # your code here
+def tag(name, content, **attrs):
+    return f"<{name} href=\"{attrs["href"]}\" target=\"{attrs["target"]}\">{content}</{name}>"
+
+# def tag(name, content, **attrs):
+    # print(name, content, attrs)
+print(tag('a','Python', href="https://python.org", target="_blank"))
 
 
 # --------------------------------------------------------------
