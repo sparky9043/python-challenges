@@ -41,6 +41,12 @@ def fahrenheit_to_celsius(fahrenheit):
 # --------------------------------------------------------------
 
 # your code here
+def greet(name, greeting="Hello"):
+    print(f"{name}, {greeting}!")
+    
+# greet('Jay')
+# greet('John', 'good morning')
+# greet(greeting='greetings', name='Tory')
 
 
 # --------------------------------------------------------------
