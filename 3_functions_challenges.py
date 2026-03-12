@@ -124,7 +124,30 @@ def analyze(numbers):
 # --------------------------------------------------------------
 
 # your code here
+def add(a: float, b: float) -> float:
+    """Function takes two floats and returns their sum as floats"""
+    return float(a + b)
 
+def subtract(a: float, b: float) -> float:
+    """Function takes two floats and returns their difference as floats"""
+    return float(a - b)
+
+def multiply(a: float, b: float) -> float:
+    """Function takes two floats and returns their product as floats"""
+    return float(a * b)
+
+def divide(a: float, b: float) -> float:
+    """Function takes two floats and returns their quotient as floats"""
+    try:
+        return a / b
+    except ZeroDivisionError as e:
+        print("Error:", e)
+        return None
+
+print(add(3, 4))
+print(subtract(3, 4))
+print(multiply(3, 4))
+print(divide(3, 0))
 
 # --------------------------------------------------------------
 # Challenge 7 — Decorator: Logger
