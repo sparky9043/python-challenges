@@ -84,6 +84,15 @@ for number in range(1, 31):
 
 numbers = [4, 7, 2, -3, 8, -1, 5]
 # your code here
+for number in numbers:
+    positivity = False
+    if number < 0:
+        print(f"{number} is the first negative number in list")
+        break
+    positivity = True
+    
+if positivity:
+    print("All positive")
 
 
 # --------------------------------------------------------------
