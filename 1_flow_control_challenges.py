@@ -200,19 +200,20 @@ for n in range(1, 11):
     if n % 2 != 0:
         result.append(n ** 2)
         
+# your list comprehension here
 result_comprehension = [number ** 2 for number in range(1, 11) if number % 2 != 0]
 print(result_comprehension)
 
-# your list comprehension here
-
 # Block B — rewrite as a dict comprehension
 word_map = {}
-for word in ["apple", "banana", "cherry"]:
+fruits = ["apple", "banana", "cherry"]
+for word in fruits:
     if len(word) > 5:
         word_map[word] = len(word)
 
 # your dict comprehension here
-
+word_map_dict = {word: len(word) for word in fruits if len(word) > 5}
+print(word_map_dict)
 
 # --------------------------------------------------------------
 # Challenge 10 — Walrus & Short-Circuit
