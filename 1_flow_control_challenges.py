@@ -145,7 +145,16 @@ print(f"Attempts: {attempts}")
 # --------------------------------------------------------------
 
 def safe_divide(a, b):
-    pass  # your code here
+    try:
+        result = a / b
+    except ZeroDivisionError as error:
+        print(f"{error}: You cannot divide by zero")
+        return None
+    else:
+        print("Success!")
+        return result
+    finally:
+        print("Operation complete")
 
 safe_divide(10, 2)
 safe_divide(5, 0)
