@@ -20,6 +20,14 @@
 
 age = 34
 # your code here
+if age < 5:
+    print("Free")
+elif age <= 17:
+    print("$8")
+elif age <= 64:
+    print("$15")
+else:
+    print("10")
 
 
 # --------------------------------------------------------------
