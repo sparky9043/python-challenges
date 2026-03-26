@@ -44,6 +44,13 @@ else:
 logged_in = True
 is_admin  = False
 # your code here
+if logged_in:
+    if is_admin:
+        print("logged in as admin")
+    else:
+        print("logged in as user")
+else:
+    print("not logged in")
 
 
 # --------------------------------------------------------------
