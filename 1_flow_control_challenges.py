@@ -199,6 +199,9 @@ result = []
 for n in range(1, 11):
     if n % 2 != 0:
         result.append(n ** 2)
+        
+result_comprehension = [number ** 2 for number in range(1, 11) if number % 2 != 0]
+print(result_comprehension)
 
 # your list comprehension here
 
