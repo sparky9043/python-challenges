@@ -106,7 +106,10 @@ if positivity:
 phrase = "flow control"
 vowels = "aeiou"
 # your code here
-
+for letter in phrase:
+    if letter in vowels or not letter.isalpha():
+        continue
+    print(letter)
 
 # --------------------------------------------------------------
 # Challenge 6 — Guess the Number (while loop)
