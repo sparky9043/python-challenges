@@ -233,6 +233,9 @@ print(word_map_dict)
 # Part A
 strings = ["hi", "python", "ok", "programming", "AI", "flow"]
 # your code here
+for word in strings:
+    if (length := len(word)) > 5:
+        print(f"Word: {word}, Length: {length}")
 
 # Part B
 nickname  = ""
