@@ -65,7 +65,13 @@ else:
 # --------------------------------------------------------------
 
 # your code here
-
+for number in range(1, 31):
+    if number % 15 == 0:
+        print(number, "FizzBuzz")
+    elif number % 3 == 0:
+        print(number, "Fizz")
+    elif number % 5 == 0:
+        print(number, "Buzz")
 
 # --------------------------------------------------------------
 # Challenge 4 — Find the First Negative
