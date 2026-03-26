@@ -243,7 +243,8 @@ username  = ""
 full_name = "Alice Johnson"
 # your code here — assign display_name using `or` chaining
 # then print display_name
-
+display_name = nickname or username or full_name
+print(display_name)
 
 # ============================================================
 # BONUS TIPS
