@@ -174,7 +174,15 @@ safe_divide(5, 0)
 
 commands = ["start", "status", "restart", "quit"]
 for command in commands:
-    pass  # your code here
+    match command:
+        case 'start':
+            print("Server starting...")
+        case 'stop' | 'quit':
+            print("Server shutting down...")
+        case 'status':
+            print("Server is running.")
+        case _:
+            print(f"Unknown command: {command}")
 
 
 # --------------------------------------------------------------
