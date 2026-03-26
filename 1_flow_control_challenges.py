@@ -125,6 +125,11 @@ secret  = 91
 guess   = 0
 attempts = 0
 # your code here
+while guess < secret:
+    guess += 13
+    attempts += 1
+    print(f"Guess: {guess}")
+print(f"Attempts: {attempts}")
 
 
 # --------------------------------------------------------------
