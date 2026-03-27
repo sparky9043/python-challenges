@@ -105,7 +105,14 @@ print(final)
 
 subjects = ["math", "science", "history", "art"]
 # your code here
+my_dict = dict.fromkeys(subjects, 0)
 
+# Without using fromkeys: Alternate Solution
+# my_dict_alt = {}
+# for subject in subjects:
+#     my_dict_alt[subject] = 0
+
+print(my_dict)
 
 # --------------------------------------------------------------
 # Challenge 9 — Count Word Frequency
