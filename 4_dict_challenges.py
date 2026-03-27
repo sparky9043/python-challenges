@@ -139,6 +139,8 @@ print(count)
 scores = {"Bob": 88, "Alice": 95, "Charlie": 72, "Diana": 90}
 # your code here
 
+sorted_scores = dict(sorted(scores.items(), key=lambda item: item[1]))
+print(sorted_scores)
 
 # ============================================================
 # BONUS TIPS
