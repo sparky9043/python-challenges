@@ -124,6 +124,9 @@ print(my_dict)
 words = ["apple", "banana", "apple", "cherry", "banana", "apple"]
 count = {}
 # your code here
+for word in words:
+    count[word] = count.get(word, 0) + 1
+print(count)
 
 
 # --------------------------------------------------------------
