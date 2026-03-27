@@ -65,6 +65,8 @@ print(config)
 
 employee = {"name": "Alice", "age": 30, "city": "Toronto"}
 # your code here
+employee.pop("city")
+print(employee)
 
 
 # --------------------------------------------------------------
