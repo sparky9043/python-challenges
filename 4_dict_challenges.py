@@ -51,7 +51,10 @@ print(record)
 
 config = {"lang": "en", "debug": False}
 # your code here
-
+config.setdefault("theme", "light")
+print(config)
+config.setdefault('lang', 'jap')
+print(config)
 
 # --------------------------------------------------------------
 # Challenge 5 — Remove and Reuse
