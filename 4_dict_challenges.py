@@ -92,6 +92,8 @@ print(inventory.items())
 defaults   = {"theme": "light", "lang": "en", "debug": False}
 user_prefs = {"theme": "dark", "lang": "fr"}
 # your code here
+final = defaults | user_prefs
+print(final)
 
 
 # --------------------------------------------------------------
