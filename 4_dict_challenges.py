@@ -39,7 +39,8 @@ print(email)
 
 record = {"name": "Bob", "age": 25}
 # your code here
-
+record.update({ "age": 26, "job": "Dev" })
+print(record)
 
 # --------------------------------------------------------------
 # Challenge 4 — Set Only If Missing
