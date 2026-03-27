@@ -78,7 +78,9 @@ print(employee)
 
 inventory = {"apples": 10, "bananas": 5, "oranges": 8}
 # your code here
-
+print(inventory.keys())
+print(inventory.values())
+print(inventory.items())
 
 # --------------------------------------------------------------
 # Challenge 7 — Merge Preferences
