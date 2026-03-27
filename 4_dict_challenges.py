@@ -12,8 +12,10 @@
 # Method: get()
 # --------------------------------------------------------------
 
-profile = {}
+profile = { "name": "jonathan", "age": 47, "city": "Victoria" }
 # your code here
+for key in profile:
+    print(profile.get(key))
 
 
 # --------------------------------------------------------------
@@ -25,7 +27,8 @@ profile = {}
 
 user = {"name": "Bob", "age": 25}
 # your code here
-
+email = user.get("email", "not provided")
+print(email)
 
 # --------------------------------------------------------------
 # Challenge 3 — Update the Record
